@@ -15,10 +15,6 @@ Entities Identified:
 
 Mainly there are 3 entities.
 
-USER
-TICKET
-BUS
-
 All their respective fields are :
 
 ##  USER: 
