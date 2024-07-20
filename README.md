@@ -69,6 +69,7 @@ Principle followed.
 
 Get all availables buses and schedules
 - http://localhost:8080/api/bus/all
+
 Search for buses based on departure and arrival locations, date
 - http://localhost:8080/api/bus/search
 
