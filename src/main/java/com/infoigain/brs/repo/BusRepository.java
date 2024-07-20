@@ -1,16 +1,16 @@
 package com.infoigain.brs.repo;
 
 import com.infoigain.brs.models.Bus;
-import com.infoigain.brs.models.responses.Schedule;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 
+import java.time.LocalDate;
 import java.util.List;
 
+@Repository
 public interface BusRepository extends JpaRepository<Bus, Long> {
-    List<Bus> findByDepartureStationAndArrivalStation(String departureStation, String arrivalStation);
-
-    @Query("select ")
-    List<Schedule> getSchedules();
+    // custom method for searching based on departure and arrival locations and date
+    List<Bus> findByDepartureStationAndArrivalStationAndDepartureDate(String departureStation, String arrivalStation, LocalDate departureDate);
 }

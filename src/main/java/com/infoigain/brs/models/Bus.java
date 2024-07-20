@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Getter
@@ -19,9 +20,7 @@ public class Bus {
     private String arrivalStation;
     @Column(nullable = false, unique = true)
     private int busNumber;
-
     private LocalDate departureDate;
-
-
-
+    private LocalTime localTime;
+    private int totalSeats;
 }

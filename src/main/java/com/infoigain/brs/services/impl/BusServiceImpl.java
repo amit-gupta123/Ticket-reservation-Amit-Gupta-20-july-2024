@@ -1,12 +1,14 @@
-package com.infoigain.brs.services;
+package com.infoigain.brs.services.impl;
 
 import com.infoigain.brs.models.Bus;
-import com.infoigain.brs.models.responses.Schedule;
 import com.infoigain.brs.repo.BusRepository;
+import com.infoigain.brs.services.BusServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class BusServiceImpl implements BusServiceI {
@@ -28,14 +30,15 @@ public class BusServiceImpl implements BusServiceI {
     }
 
     @Override
-    public List<Bus> getBusBySourceAndDestination(String departureStation, String arrivalStation) {
-        System.out.println(this.busRepository.findByDepartureStationAndArrivalStation(departureStation,arrivalStation));
-        return this.busRepository.findByDepartureStationAndArrivalStation(departureStation, arrivalStation);
+    public List<Bus> getBusBySourceAndDestinationAndDate(String departureStation, String arrivalStation, LocalDate departureDate) {
+       //  System.out.println(this.busRepository.findByDepartureStationAndArrivalStationAndDepartureDate(departureStation,arrivalStation,departureDate));
+        return this.busRepository.findByDepartureStationAndArrivalStationAndDepartureDate(departureStation, arrivalStation,departureDate);
     }
 
     @Override
-    public List<Schedule> getSchedules() {
-        return this.busRepository.getSchedules();
+    public Set<Integer> getAvailableSeats(int busNumber) {
+        return null;
     }
+
 
 }

@@ -1,14 +1,14 @@
 package com.infoigain.brs.services;
 
 import com.infoigain.brs.models.Bus;
-import com.infoigain.brs.models.responses.Schedule;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 public interface BusServiceI {
-    public List<Bus>getAllBuses();
-    public Bus addBus(Bus theBus);
-    public List<Bus>getBusBySourceAndDestination(String departureStation, String arrivalStation);
-
-    List<Schedule> getSchedules();
+     List<Bus>getAllBuses();
+     Bus addBus(Bus theBus);
+     List<Bus>getBusBySourceAndDestinationAndDate(String departureStation, String arrivalStation, LocalDate localDate);
+     Set<Integer> getAvailableSeats(int busNumber);
 }
