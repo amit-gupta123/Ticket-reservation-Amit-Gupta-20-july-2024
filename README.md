@@ -64,7 +64,7 @@ All their respective fields are :
 
 
 
-  // how to run,
+  ## how to Run the project ? 
   install required tool. 
   configure databases and make a db called brs, othewrwise make your own name and change it in propertie file.
   Run the project and hit endpoints.
