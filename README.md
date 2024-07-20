@@ -65,4 +65,15 @@ Principle followed.
   Run the project and hit endpoints.
   if there is any data not present, please fill it using sql query in backend.
 
+# Use case 2:
+
+Get all availables buses and schedules
+- http://localhost:8080/api/bus/all
+Search for buses based on departure and arrival locations, date
+- http://localhost:8080/api/bus/search
+
+all other can be seen from code. 
+I am deeply regretted for not adding those end point.
+
+
   
