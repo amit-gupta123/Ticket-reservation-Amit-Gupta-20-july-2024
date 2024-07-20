@@ -50,7 +50,7 @@ Functionality related to bus
   2. to view available bus and routine, just get all bus details
 Functionality related to user
 - 1. user login is just simulated and can be improved using, jwt, oauth, and other machenism.
--- other functionality are implemented but NOt properly tested.
+-- Other functionality are implemented but not properly tested.
 
 Principle followed.
 - 1. SRP: Every class does not have a more than 1 reason to open it.
